@@ -31,7 +31,7 @@ class MysqlSession {
     this.data = {};
     this.tableName = (this.options.prefix || '') + 'session';
     this.status = 0;
-    this.maxAge = this.options.maxAge || 0;
+    this.maxAge = this.options.cookieOptions || 0;
     this.expire = 0;
     this.gcType = `session_mysql`;
     gc(this, this.options.gcInterval);
